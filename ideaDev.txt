@@ -1,0 +1,30 @@
+catergories:
+ideas, feelings journal, memories, to-do lists, books to read, books read, movies to watch, awesome quotes
+
+
+Users first go to home screen where the content of the page is described.
+
+They have the oportunity to register or log in if they already have an account.
+
+When User is first registered he gets a screen in which he should choose catergories which he wants to track.
+
+After that he gets his home screen with all catergories he chose.
+
+User can always add categories by opening the menu and chosing already created category or creating a new one.
+
+When user wants to create a new note he chooses the category and he can add a new note.
+
+Notes are stored in the database for every loged in user.
+
+
+
+DB:
+Users table - Id, Username, password
+
+Categories - Id, Title,      | Description
+
+CategoryUser - CategoryId, UserId
+
+NoteUser table - noteId, userId
+
+Notes table - Id, Title, Description, Date modified, CategoryId       | Image

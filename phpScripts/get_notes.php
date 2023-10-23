@@ -5,20 +5,18 @@ include '../config.php';
 function get_notes(){
     $conn = connectToDatabase();
 
-    $category = $_GET['category'];
+    $categoryId = $_GET['categoryId'];
     
     $query = "SELECT * FROM notes WHERE categoryId = ?";
-    //$query = "SELECT * FROM notes";
     $statement = $conn->prepare($query);
-    $statement->bind_param("s", $category);
+    $statement->bind_param("s", $categoryId);
+
 
 
     if($statement->execute()){
         $statement->bind_result($id, $title, $description, $dateModified, $categoryId);
-
+        //skontat kako da hvatam s fetch a ne s bind_result
         $result = [];
-
-        echo $category;
 
         while($statement->fetch()){
             $result[] = [
