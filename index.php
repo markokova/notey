@@ -8,8 +8,7 @@
 </head>
 <body>
     <?php include('header.php');?>
-    <h1>Welcome to Notey</h1>
-
+    <h1 id="welcome-message">Welcome to Notey</h1>
     <div class="card-container">
         <?php 
         include './phpScripts/get_categories.php';
@@ -18,7 +17,7 @@
         <?php foreach($categories as $category): ?>
             <div class="category-card"> 
                 <a href="pages/notes.php?category=<?php echo $category["title"]; ?>&categoryId=<?php echo $category["id"];?>">
-                    <img src="images/lightbulb.jpg" alt="Avatar" style="width:100%">
+                    <img src="<?php echo $category["image"]?>" alt="Avatar">
                     <div class="container">
                         <h2><b><?php echo $category["title"]; ?></b></h2>
                         <p>A change in the world starts with an idea.</p>

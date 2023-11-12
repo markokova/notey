@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include('../header.php');?>
-<h2>Add a new note</h2>
+<h2 id="add-new-note-text">Add a new note</h2>
     <form action="/phpScripts/save_note.php" method="POST">
         <input type="hidden" name="categoryId" value="<?php echo $_GET["categoryId"]; ?>">
         <input type="hidden" name="category" value="<?php echo $_GET["category"]?>">

@@ -28,3 +28,14 @@ CategoryUser - CategoryId, UserId
 NoteUser table - noteId, userId
 
 Notes table - Id, Title, Description, Date modified, CategoryId       | Image
+
+
+
+
+notes:
+
+-use delete button as a component and reuse it or better yet use whole note card as a component and reuse it
+
+-when loging out or submiting forms I don't want to let the user be able to go back with browser back arrow button.
+
+-stop long descriptions from overlaping in note.php page

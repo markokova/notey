@@ -5,6 +5,7 @@
     transition: 0.3s;
     margin-right: 10px;
     margin-left: 10px;
+    margin-top: 20px;
     display: flex;
 }
 
@@ -43,11 +44,13 @@
 .note-container {
     display: flex; /* Use flexbox layout */
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-container {
     display: flex; /* Use flexbox layout */
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 h2, p, a{
@@ -97,6 +100,8 @@ label {
     text-decoration: none; /* Remove underlines */
     display: flex; /* Use flex layout for horizontal alignment */
     align-items: center; /* Center align elements vertically */
+    width: 100%;
+    justify-content: center;
 }
 
 /* Style the logo text */
@@ -105,9 +110,58 @@ label {
     font-weight: bold; /* Make the text bold */
     color: #3498db; /* Text color */
     margin-right: 10px; /* Add spacing between logo and text */
+    text-align: center;
 }
 
 /* Change text color on hover */
 .logo:hover .logo-text {
     color: #2980b9;
+}
+
+.note-description{
+    overflow: hidden;
+}
+
+#note-descripton{
+    width: 100px;
+    overflow: hidden;
+    white-space:pre-wrap; 
+}
+
+a{
+    width: 300px;
+}
+
+img{
+    width: 100%;
+}
+
+#go-to-register-button{
+    text-align: center;
+}
+
+.text-title{
+    text-align: center;
+}
+
+#logout-image{
+    width: 3%;
+    display: flex;
+    float: right;
+    margin-right: 30px;
+}
+
+#welcome-message{
+    text-align: center;
+    margin-left: 5%;
+}
+
+.garbage-image{
+    width: 7%;
+    float: right;
+    padding-right: 10px;
+}
+
+#add-new-note-text{
+    text-align: center;
 }

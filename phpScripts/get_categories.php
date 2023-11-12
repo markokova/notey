@@ -11,12 +11,13 @@ function get_categories(){
 
     if($statement->execute()){
 
-        $statement->bind_result($id, $title);
+        $statement->bind_result($id, $title, $image);
 
         while($statement->fetch()){
             $result[] = [
                 "id" => $id,
-                "title" => $title
+                "title" => $title,
+                "image" => $image
             ];
         }
 

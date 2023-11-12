@@ -3,9 +3,9 @@
 //include '../config.php';
 require_once('../config.php');
 
-$conn = connectToDatabase();
-
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $conn = connectToDatabase();
+    
     $id = uniqid();
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -24,11 +24,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         $statement->bind_param("sssss", $id, $title, $description, $dateModified, $categoryId);
     
         if($statement->execute()){
-            //header("Location: ../pages/notes.php");
             $statement->close();
             $conn->close();
-            //exit(); // Terminate the current script to ensure the redirection takes effect
-            $outcome_message = "Note saved successfully!";
+            header("Location: ../pages/notes.php?category=$category&categoryId=$categoryId");
+            exit(); // Terminate the current script to ensure the redirection takes effect
+            
         } else{
             $outcome_message = "Error: " . $statement->error;
             $statement->close();
