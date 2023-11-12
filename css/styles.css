@@ -151,9 +151,8 @@ img{
     margin-right: 30px;
 }
 
-#welcome-message{
+.centered-title{
     text-align: center;
-    margin-left: 5%;
 }
 
 .garbage-image{

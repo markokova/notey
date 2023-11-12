@@ -39,3 +39,5 @@ notes:
 -when loging out or submiting forms I don't want to let the user be able to go back with browser back arrow button.
 
 -stop long descriptions from overlaping in note.php page
+
+-limit how much of description is shown and hide the rest, only when it is opened in note.php you can see all(should see)

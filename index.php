@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php include('header.php');?>
-    <h1 id="welcome-message">Welcome to Notey</h1>
+    <h1 class="centered-title">Welcome to Notey</h1>
     <div class="card-container">
         <?php 
         include './phpScripts/get_categories.php';
